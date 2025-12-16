@@ -4,6 +4,8 @@ import 'package:nactar/Cubit/SplaceScreen/visibilitycubit.dart';
 import 'package:nactar/Pages/Login.dart';
 
 import 'Cubit/SplaceScreen/Splace_Scrren_Cubit.dart';
+import 'Pages/Locaton_Page.dart';
+import 'Pages/Signup.dart';
 import 'Pages/SplaceScreen.dart';
 import 'Pages/Welcome.dart';
 
@@ -31,6 +33,9 @@ class MyApp extends StatelessWidget {
         "/": (context) => Splash_screen(),
         "/welcome": (context) => Welcome(),
         "/login": (context) => Login(),
+        "/Signup": (context) => Signup(),
+        "/LocatonPage": (context) => LocatonPage(),
+
       },
     );
   }

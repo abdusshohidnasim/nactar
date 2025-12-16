@@ -36,9 +36,12 @@ class CustomTextformfield extends StatelessWidget {
             ),
           )
               : TextFormField(
+            cursorColor: Colors.white,
+            validator: validator,
             decoration: InputDecoration(
               hintText: hinttext,
               border: OutlineInputBorder(
+
                 borderRadius: BorderRadius.circular(15),
               ),
             ),
