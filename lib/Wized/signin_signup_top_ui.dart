@@ -10,6 +10,6 @@ Container Signin_signup_top_ui({required BuildContext context}) {
         fit: BoxFit.fill,
       ),
     ),
-    child: Center(child: Image.asset("assets/images/gajor.png", height: 70)),
+    child: Center(child: Image.asset("assets/images/Group (1).png", height: 70)),
   );
 }

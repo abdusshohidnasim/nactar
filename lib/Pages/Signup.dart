@@ -103,6 +103,7 @@ class Signup extends StatelessWidget {
                     ),
 
                     CustomTextformfield(
+
                       hinttext: "password",
                       isPassword: true,
                       validator: (String? value) {

@@ -77,6 +77,7 @@ class Login extends StatelessWidget {
                       ),
                     ),
                     CustomTextformfield(
+
                       hinttext: "password",
                       isPassword: true,
                       validator: (String? value) {
@@ -137,7 +138,7 @@ class Login extends StatelessWidget {
                         ),
                         InkWell(
                           onTap: (){
-                            Navigator.pushReplacementNamed(context,"/LocatonPage" );
+                            Navigator.pushReplacementNamed(context, "/CurrentLocation");
                           },
                           child: Text(
                             "Sigup",

@@ -8,8 +8,14 @@ class CustomTextformfield extends StatelessWidget {
   final bool isPassword;
   //final String? Function(String?)? validator;
   final FormFieldValidator<String>? validator;
+  final Widget? prefix;
 
-  CustomTextformfield({
+  CustomTextformfield(
+
+
+      {
+        this.prefix,
+
     super.key,
     required this.hinttext,
     required this.isPassword,
@@ -18,35 +24,43 @@ class CustomTextformfield extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<visibilitycubit,visibilitystatecubit>(builder: (context,State,)=>
-        Card(
-          elevation: 1,
-          child: isPassword
-              ? TextFormField(
-            obscureText: State.toggle,
-            validator: validator,
-            decoration: InputDecoration(
+    return BlocBuilder<visibilitycubit, visibilitystatecubit>(
+      builder: (context, State) => Card(
+        elevation: 1,
+        child: isPassword
+            ? TextFormField(
+                obscureText: State.toggle,
+                validator: validator,
+                decoration: InputDecoration(
+                  hintText: hinttext,
 
-              hintText: hinttext,
+                  suffixIcon: IconButton(
+                    onPressed: () {
+                      context.read<visibilitycubit>().toggleloagic();
+                    },
+                    icon: Icon(
+                      State.toggle ? Icons.visibility_off : Icons.visibility,
+                    ),
+                  ),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                ),
+              )
+            : TextFormField(
 
-              suffixIcon: IconButton(onPressed: (){context.read<visibilitycubit>().toggleloagic();},icon: Icon(State.toggle?Icons.visibility_off:Icons.visibility),),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(15),
+
+                cursorColor: Colors.white,
+                validator: validator,
+                decoration: InputDecoration(
+                  prefix: prefix,
+                  hintText: hinttext,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                ),
               ),
-            ),
-          )
-              : TextFormField(
-            cursorColor: Colors.white,
-            validator: validator,
-            decoration: InputDecoration(
-              hintText: hinttext,
-              border: OutlineInputBorder(
-
-                borderRadius: BorderRadius.circular(15),
-              ),
-            ),
-          ),
-        ));
-     
+      ),
+    );
   }
 }
