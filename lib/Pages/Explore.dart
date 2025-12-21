@@ -16,6 +16,9 @@ class Explore extends StatelessWidget {
         padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
         child: Column(
           children: [
+
+
+
             Center(
               child: Text(
                 "Find Products",
@@ -25,11 +28,10 @@ class Explore extends StatelessWidget {
 
             Padding(
               padding: const EdgeInsets.only(right: 20),
-              child: CustomTextformfield(
-                prefix: Icon(Icons.search),
-                hinttext: 'Search Store',
-                isPassword: false,
-                validator: (String? value) {},
+              child: Row(
+                children: [
+                  Row(children: [],)
+                ],
               ),
             ),
             Greadeviw(ImagePath: 'assets/images/egg.png', isbutton: true, addbuttonOntabe: () {  },)
