@@ -35,7 +35,7 @@ class Shop extends StatelessWidget {
 
                 children: [
                   const Icon(Icons.location_on),
-                  Text((ModalRoute.of(context)!.settings.arguments).toString()),
+                  Expanded(child: Text((ModalRoute.of(context)!.settings.arguments).toString())),
                 ],
               ),
               SizedBox(height: 10),

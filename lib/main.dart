@@ -5,6 +5,7 @@ import 'package:nactar/Cubit/SplaceScreen/Slider.dart';
 import 'package:nactar/Cubit/SplaceScreen/visibilitycubit.dart';
 import 'package:nactar/Pages/Login.dart';
 
+import 'Cubit/SplaceScreen/ItemCounterCubit.dart';
 import 'Cubit/SplaceScreen/Splace_Scrren_Cubit.dart';
 import 'Pages/CurrentLocation.dart';
 import 'Pages/Locaton_Page.dart';
@@ -21,6 +22,7 @@ void main() {
         BlocProvider(create: (context)=>visibilitycubit()),
         BlocProvider(create: (context)=>ButtomNavigatinCubit()),
         BlocProvider(create: (context)=>SliderCubit(3)),
+        BlocProvider(create: (context)=>ItemCounterCubit()),
 
       ],
       child: MyApp(),

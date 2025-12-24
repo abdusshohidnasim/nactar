@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../Style/Colors.dart';
 import '../Wized/Greadeviw.dart';
+import '../Wized/Scarch.dart';
 import '../Wized/TextFormField.dart';
 
 class Explore extends StatelessWidget {
@@ -16,25 +17,37 @@ class Explore extends StatelessWidget {
         padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
         child: Column(
           children: [
-
-
-
             Center(
               child: Text(
                 "Find Products",
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
-            ),SizedBox(height: 10),
+            ),
+            SizedBox(height: 10),
 
             Padding(
               padding: const EdgeInsets.only(right: 20),
               child: Row(
                 children: [
-                  Row(children: [],)
+                  Expanded(
+                    child: CustomTextformfield(
+                      prefix: Icon(Icons.search),
+                      hinttext: 'Search Store',
+                      isPassword: false,
+                      validator: (String? value) {},
+                    ),
+                  ),
+                  SizedBox(width: 10,),
+
+                  Image.asset("assets/images/filter.png",height: 30,)
                 ],
               ),
             ),
-            Greadeviw(ImagePath: 'assets/images/egg.png', isbutton: true, addbuttonOntabe: () {  },)
+            Greadeviw(
+              ImagePath: 'assets/images/egg.png',
+              isbutton: true,
+              addbuttonOntabe: () {},
+            ),
           ],
         ),
       ),

@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:nactar/Cubit/SplaceScreen/ButtomNavigation_Cubit.dart';
 import 'package:nactar/Cubit/SplaceScreen/ButtomNavigatorBar_State.dart';
 import 'package:nactar/Pages/Account.dart';
+import 'package:nactar/Pages/CardPage.dart';
 import 'package:nactar/Pages/Explore.dart';
 import 'package:nactar/Pages/Favourite.dart';
 import 'package:nactar/Pages/Shop.dart';
@@ -11,7 +12,7 @@ import 'package:nactar/Style/Colors.dart';
 class ButtomNavigatorBarpage extends StatelessWidget {
   ButtomNavigatorBarpage({super.key});
 
-  List Pages = [Shop(), Explore(), Card(), Favourite(), Account()];
+  List Pages = [Shop(), Explore(), CardPage(), Favourite(), Account()];
 
   @override
   Widget build(BuildContext context) {
