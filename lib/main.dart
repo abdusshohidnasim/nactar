@@ -5,9 +5,11 @@ import 'package:nactar/Cubit/SplaceScreen/Slider.dart';
 import 'package:nactar/Cubit/SplaceScreen/visibilitycubit.dart';
 import 'package:nactar/Pages/Login.dart';
 
+import 'Cubit/SplaceScreen/ChackboxCubit.dart';
 import 'Cubit/SplaceScreen/ItemCounterCubit.dart';
 import 'Cubit/SplaceScreen/Splace_Scrren_Cubit.dart';
 import 'Pages/CurrentLocation.dart';
+import 'Pages/Filters.dart';
 import 'Pages/Locaton_Page.dart';
 import 'Pages/ButtomNavigatorBarpage.dart';
 import 'Pages/Signup.dart';
@@ -23,6 +25,7 @@ void main() {
         BlocProvider(create: (context)=>ButtomNavigatinCubit()),
         BlocProvider(create: (context)=>SliderCubit(3)),
         BlocProvider(create: (context)=>ItemCounterCubit()),
+        BlocProvider(create: (context)=>ChackboxCubit()),
 
       ],
       child: MyApp(),
@@ -45,6 +48,7 @@ class MyApp extends StatelessWidget {
         "/LocatonPage": (context) => LocatonPage(),
         "/CurrentLocation": (context) => CurrentLocation(),
         "/ButtomNavigatorBarpage": (context) => ButtomNavigatorBarpage(),
+        "/Filters": (context) => Filters(),
       },
     );
   }

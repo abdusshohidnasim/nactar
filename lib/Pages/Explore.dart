@@ -39,7 +39,11 @@ class Explore extends StatelessWidget {
                   ),
                   SizedBox(width: 10,),
 
-                  Image.asset("assets/images/filter.png",height: 30,)
+                  InkWell(
+                      onTap: (){
+                        Navigator.pushNamed(context,  "/Filters");
+                      },
+                      child: Image.asset("assets/images/filter.png",height: 30,))
                 ],
               ),
             ),

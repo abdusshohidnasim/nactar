@@ -25,7 +25,6 @@ class ButtomNavigatorBarpage extends StatelessWidget {
           unselectedItemColor: Colors.black,
           showSelectedLabels: true,
           showUnselectedLabels: true,
-
           onTap: (valu){
             context.read<ButtomNavigatinCubit>().Changepage(valu);
          },

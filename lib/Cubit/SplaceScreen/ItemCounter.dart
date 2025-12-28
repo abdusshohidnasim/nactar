@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 
 class ItemCount extends Equatable{
-  final int count;
+  final Map<int,int> count;
   ItemCount({required this.count});
 
 
