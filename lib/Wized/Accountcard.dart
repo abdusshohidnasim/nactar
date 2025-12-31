@@ -23,7 +23,7 @@ class Accountcard extends StatelessWidget {
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
               ),
               Spacer(),
-              Icon(Icons.arrow_forward_ios),
+              Icon(Icons.arrow_forward_ios),// icon
             ],
           ),
         ),
@@ -31,3 +31,4 @@ class Accountcard extends StatelessWidget {
     );
   }
 }
+
