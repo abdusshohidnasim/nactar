@@ -11,7 +11,7 @@ class Prodrectedandprice extends StatelessWidget {
   final int itemcount;
   final  VoidCallback addbuttonOntabe;
   String ImagePath;
-  //Widget Gridviwandlistviw;
+
 
    Prodrectedandprice({super.key, required this.itemcount,required this.ImagePath, required this.addbuttonOntabe,});
 

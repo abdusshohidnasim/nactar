@@ -13,7 +13,7 @@ class Filters extends StatelessWidget {
         children: [
           const SizedBox(height: 50),
 
-          /// Top bar
+
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(

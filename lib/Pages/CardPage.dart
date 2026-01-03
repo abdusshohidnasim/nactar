@@ -60,7 +60,7 @@ class CardPage extends StatelessWidget {
                                       fontWeight: FontWeight.w400,
                                     ),
                                   ),
-                                  // Text("${State.count[index] ?? 1}"),
+
                                   Row(
                                     children: [
                                       IconButton(
@@ -68,7 +68,7 @@ class CardPage extends StatelessWidget {
                                           context
                                               .read<ItemCounterCubit>()
                                               .Decrement(index);
-                                          //  context.read<ItemCounterCubit>().Decrement(index);
+
                                         },
 
                                         icon: ImageIcon(
